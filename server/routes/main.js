@@ -5,7 +5,16 @@ const router = express.Router();
 //routes
 1
 router.get('', (req, res) => {
-    res.send("hello World");
+
+    const locals = {
+        title: "Cooking Blog",
+        description: "Simple Blog Created with NodeJs, Express and MongoDB."
+    }
+
+
+
+
+    res.render('index',{locals});
 });
 
 
